@@ -17,7 +17,7 @@ export async function listAllPosts(options) {
 }
 
 export async function listPostsByAuthor(author, options) {
-  const data = { author: { $regex: author, $options: 'xi' } }
+  const data = { author: { $regex: author, $options: 'i' } }
   return await listPosts(data, options)
 }
 
