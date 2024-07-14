@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: npm ci
+        run: npm install && npm ci
       - name: Install backend dependencies
-        run: cd backend/ && npm ci
+        run: cd backend/ && npm install && npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
